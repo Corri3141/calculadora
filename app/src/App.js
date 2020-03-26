@@ -22,8 +22,9 @@ function App() {
       setResult({ time:eval(position)/eval(speed),positionVariation:eval(position),speed:eval(speed)})
     }else if(position && time && !speed){
       setResult({ speed:eval(position)/eval(time),positionVariation:eval(position),time:eval(time)})
+    }else if(position && time && speed) {setResult({speed:eval(speed),positionVariation:eval(position),time:eval(time)})}
     }
-  }
+  
 
   return (
     <div>
@@ -33,6 +34,14 @@ function App() {
       Inicial Speed :<input type="text" onChange={(event)=>setSpeed(event.currentTarget.value)}/>
       <button onClick={resultCalculator}>Calculate</button>
     </div>
+    <div> 
+      
+
+
+      
+    </div> 
+
+    <div>
     {result ? <TableContainer component={Paper}>
       <Table>
         <TableHead>
@@ -50,7 +59,12 @@ function App() {
             </TableRow>
         </TableBody>
       </Table>
+      
+      initial position:<input type="text" onChange={(event)=>setInitpos(event.currentTarget.value)}
+
     </TableContainer> : null }
+    </div>
+
     </div>
   );
 }
