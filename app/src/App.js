@@ -7,6 +7,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
+
 function App() {
   const [position,setPosition] = useState(null)
   const [time,setTime] = useState(null)
@@ -50,7 +51,6 @@ function App() {
         </TableBody>
       </Table>
     </TableContainer> : null }
-    
     </div>
   );
 }
